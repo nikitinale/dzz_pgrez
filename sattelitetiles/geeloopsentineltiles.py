@@ -317,11 +317,11 @@ def extract_sentinel2_inside_geodataframe(data_collector: satteliteTiles,
             continue
         # update <data_collector> with new data (and save it)
         sampling[1]['product_id'] = tiledata['id']
-        data_collector.add_record(tiledata['tile_10m'], 10.0, tiledata['date'], 
-                                  point_geohash, 
-                                  sampling[1][columns + ['product_id']], 
+        data_collector.add_record(tiledata['tile_10m'], 10.0, tiledata['date'],
+                                  point_geohash,
+                                  sampling[1][columns + ['product_id']],
                                   '10m02030408')
-        data_collector.add_record(tiledata['tile_20m'], 20.0, tiledata['date'], 
-                                  point_geohash, 
-                                  sampling[1][columns + ['product_id']], 
+        data_collector.add_record(tiledata['tile_20m'], 20.0, tiledata['date'],
+                                  point_geohash,
+                                  sampling[1][columns + ['product_id']],
                                   '20m050607081112')

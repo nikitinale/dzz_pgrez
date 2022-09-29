@@ -1,13 +1,13 @@
+""" Function for retrieving square fragments of Sentinel-2 data from
+Google Earth Engine for selected time slotes
+"""
+
 import ee
 from datetime import datetime
 import time
 from shapely.geometry import Point
 from .geeloopsentineltiles import get_aoi, get_geohash, get_sentinel2_tile
 from .sattelitetiles import satteliteTiles
-
-# adding path for start the script from Org Babel or Jupyter Notebook
-#project_folder = os.path.expanduser('~/mybox/eScience_ns/dzz_pgrez')
-# sys.path.append(project_folder)
 
 
 def extract_sentinel2_pointtile(data_collector: satteliteTiles,

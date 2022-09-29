@@ -137,12 +137,12 @@ def extract_point_in_compartment(areas: gpd.GeoDataFrame,
             return extracted_point, vydel
     return extracted_point, vydel
 
-def sampling_greed_in_compartments(areas: gpd.GeoDataFrame,
+def sampling_grid_in_compartments(areas: gpd.GeoDataFrame,
                                    step: int=10,
                                    padding: float=0,
                                    maxiter: int=1000,
                                    buff: float=0) -> gpd.GeoDataFrame:
-    """ Sampling set of points in nodes of a greed with size <step> inside all
+    """ Sampling set of points in nodes of a grid with size <step> inside all
         compartments <areas> in a defined distance from border of the compartments
 
     Parameters
@@ -150,7 +150,7 @@ def sampling_greed_in_compartments(areas: gpd.GeoDataFrame,
     areas : geoDataFrame
       geodatabese with areas of compartments in a column "geometry"
     step: int, default 10
-      Size of the greed cells (distance between the points in a generated set)
+      Size of the grid cells (distance between the points in a generated set)
       in units of crs
     padding: float, default 0
       paddig from a sides of a common rectangle bound of all areas in units of crs
